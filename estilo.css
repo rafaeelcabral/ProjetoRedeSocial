@@ -1,0 +1,78 @@
+body{
+    background: url(img/fundo.jpg); 
+  }
+
+  form{
+    width: 30%;
+    margin: 80px auto 10px auto;
+  }
+
+  form fieldset{
+    background: rgba(162, 170, 172, .4);
+    border-radius: 20px;
+  }
+
+  form legend{
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  legend img{
+    height: 128px;
+    width: 128px;
+    background-color: rgb(90, 20, 156);
+    padding: 15px; 
+    border-radius: 20px
+  }
+
+  form input{
+    border: 1px solid #FFF;
+    display: block;
+    width: 80%;
+    height: 40px;
+    margin: 0px auto 0px auto;
+    padding-left: 10px;
+  }
+
+  form label{
+    padding-left: 50px;
+    font-weight: bold;
+    color: navy;
+  }
+
+  #botaoEnviar{
+    font-weight: bold;
+    border: 1px solid gold;
+    display: block;
+    width: 87%;
+    height: 40px;
+    margin: 5px auto;
+    background-color: orange;
+    color: #FFF;
+    cursor: pointer;
+    margin-bottom: 40px;
+  }
+
+  p{
+    padding-left: 20px;
+    font-weight: bold;
+    color: navy;
+  }
+
+  p a{
+    color: orange;
+  }
+
+  /* @media para telas "medium" */
+  @media (max-width: 992px) {
+    form {
+      width: 50%;
+    }
+  }
+
+  /* @media para telas "small" */
+  @media (max-width: 768px) {
+    form {
+      width: 70%;
+    }
+  }     

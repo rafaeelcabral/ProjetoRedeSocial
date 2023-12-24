@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <title>Página Inicial</title>
+
+    <script>
+        // Obtém o nome do usuário a partir da URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const nomeUsuario = urlParams.get('nome');
+
+        // Exibe a mensagem de boas-vindas com o nome do usuário
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("mensagem").textContent = "Bem-vindo, " + nomeUsuario + "!";
+        });
+    </script>
+
+    <style>
+
+      body{
+        background: rgba(162, 170, 172, .4);
+      } 
+
+      header{
+        background: url(img/fundo.jpg);
+      }
+
+    </style>
+
+  </head>
+
+  <body>
+
+    <header class="navbar navbar-expand-lg navbar-dark header with-bg-image">
+
+      <a class="navbar-brand" href="#"><img src="img/rede-social.png" style="height: 60px; width: 60px;"> Wmello</a>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active p-2">
+              <a class="nav-link" href="#">Home &nbsp; &nbsp; &nbsp; |</a>
+            </li>
+            <li class="nav-item p-2">
+              <a class="nav-link" href="">Chat &nbsp; &nbsp; &nbsp; |</a>
+            </li>
+            <li class="nav-item p-2">
+              <a class="nav-link" href="">Notificações &nbsp; &nbsp; &nbsp; |</a> 
+            </li>
+            <li class="nav-item p-2">
+              <a class="nav-link" href="login.html"><img src="img/sair.png" style="width: 40px; height: 30px;"></a>
+            </li>
+          </ul>
+      </div>
+
+    </header>  
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!--Popper.js-->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <!--Bootstrap JS-->
+    <script src="js/bootstrap.min.js"></script>
+
+  </body>
+
+</html>
