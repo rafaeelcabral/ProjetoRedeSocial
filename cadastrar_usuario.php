@@ -30,64 +30,42 @@
 
 <!DOCTYPE html>
 <html>
-<head>
+
+  <head>
     <title>Cadastro de Usuário</title>
 
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
     <style>
-
-      body{
-        background: url(img/fundo.jpg);
-      } 
-
       h2{
         padding-left: 20px;
         font-weight: bold;
         color: orange;
       }
 
-      p{
-        padding-left: 20px;
-        font-weight: bold;
-        color: navy;
-      }
-
-      p a{
-        color: orange;
-      }
-
-      .mensagem{
+      #mensagem{
         width: 30%;
-	      margin: 80px auto 10px auto;
+        margin: 80px auto 10px auto;
         padding:30px;
         background: rgba(162, 170, 172, .4);
         border-radius: 20px;
       }
-
-      /* @media para telas "medium" */
-      @media (max-width: 992px) {
-        .mensagem {
-          width: 50%;
-        }
-      }
-
-      /* @media para telas "small" */
-      @media (max-width: 768px) {
-        .mensagem {
-          width: 70%;
-        }
-      }     
-
     </style>
-</head>
-<body>
 
-    <div class="mensagem">
-        <h2>Cadastro de Usuário</h2>
+  </head>
+
+  <body>
+
+    <div id="mensagem">
+      <h2>Cadastro de Usuário</h2>
         <p><?php echo $mensagem; ?></p><br>
         <hr>
         <p><?php echo $mensagem_link; ?></p>
         <hr>
     </div>  
 
-</body>
+  </body>
+
 </html>

@@ -12,17 +12,6 @@
 
     <title>Página Inicial</title>
 
-    <script>
-      // Obtém o nome do usuário a partir da URL
-      const urlParams = new URLSearchParams(window.location.search);
-      const nomeUsuario = urlParams.get('nome');
-
-      // Exibe a mensagem de boas-vindas com o nome do usuário
-      document.addEventListener("DOMContentLoaded", function() {
-        document.getElementById("mensagem").textContent = "Bem-vindo, " + nomeUsuario + "!";
-      });
-    </script>
-
     <style>
 
       body{
@@ -41,10 +30,7 @@
 
     <header class="navbar navbar-expand-lg navbar-dark header with-bg-image">
 
-      <a class="navbar-brand" href="#">
-        <img src="img/rede-social.png" style="height: 60px; width: 60px;">
-        <!--<span id="mensagem"></span> -->
-      </a>
+      <a class="navbar-brand" href="paginainicial.html"><img src="img/rede-social.png" style="height: 60px; width: 60px;"></a>
 
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -79,6 +65,35 @@
       </div>
 
     </header>  
+
+    <div class="container mt-4">
+        <h2>Resultados da Busca</h2>
+        <div id="resultado_busca">
+
+            <?php
+                // Incluir o arquivo de conexão
+                include 'conexao_mysql.php';
+
+                // Processa o termo de pesquisa
+                $username = urldecode($_GET['busca']);
+
+                // Consulta no banco de dados
+                $sql = "SELECT username, email FROM Usuario WHERE username LIKE '%$username%'";
+                $result = $conexao->query($sql);
+
+                // Exibe os resultados
+                if ($result->num_rows > 0) {
+                    while ($row = $result->fetch_assoc()) {
+                        echo "<p>Nome: " . $row['username'] . "<br>";
+                        echo "Email: " . $row['email'] . "</p>";
+                    }
+                } else {
+                    echo "<p>Nenhum usuário encontrado.</p>";
+                }           
+            ?>
+            
+        </div>
+    </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first-->

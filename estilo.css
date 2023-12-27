@@ -1,4 +1,4 @@
-body{
+  body{
     background: url(img/fundo.jpg); 
   }
 
@@ -62,6 +62,7 @@ body{
   p a{
     color: orange;
   }
+
 
   /* @media para telas "medium" */
   @media (max-width: 992px) {

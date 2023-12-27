@@ -11,12 +11,10 @@
     $result = $conexao->query($sql);
 
     // Exibe os resultados
-    if ($result->num_rows > 0){
-        while ($row = $result->fetch_assoc()) {
-            echo "Nome: " . $row['username'] . "<br>";
-            echo "Email: " . $row['email'] . "<br><br>";
-        }
-    }else{
+    if ($result->num_rows > 0) {
+    // Redireciona para a página de resultados com o termo de pesquisa
+        header("Location: resultado_busca.php?busca=" . urlencode($username));
+    } else {
         echo "Nenhum usuário encontrado.";
     }
 
