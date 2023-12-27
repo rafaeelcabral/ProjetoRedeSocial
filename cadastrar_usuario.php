@@ -1,9 +1,6 @@
 <?php
-  // Dados de conexão com o banco de dados
-  $servername = "localhost"; // endereço do servidor
-  $username = "root"; // nome de usuário do banco de dados
-  $password = ""; // senha do banco de dados
-  $dbname = "ProjetoRedeSocial"; // nome do banco de dados
+  // Incluir o arquivo de conexão
+  include 'conexao_mysql.php';
 
   // Mensagens de feedback
   $mensagem = '';
@@ -15,14 +12,6 @@
     $email = $_POST['email'];
     $usuario = $_POST['username'];
     $senha = $_POST['password'];
-
-    // Cria a conexão com o banco de dados
-    $conexao = new mysqli($servername, $username, $password, $dbname);
-
-    // Verifica se houve erro na conexão
-    if ($conexao === false) {
-      die("Erro de conexão com o banco de dados: " . mysqli_connect_error());
-    }
 
     // Insere os dados na tabela "Usuario"
     $sql = "INSERT INTO Usuario (email, username, senha) VALUES ('$email', '$usuario', '$senha')";
