@@ -1,0 +1,40 @@
+#logo{
+    width: 60px;
+    height: 60px;
+}
+
+#logout{
+    width: 40px;
+    height: 40px;
+}
+
+#username{
+    width: 275px;
+}
+
+body{
+    background: rgba(162, 170, 172, .4);
+} 
+
+header{
+    background: url(img/fundo.jpg);
+}
+
+button img{
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+li a{
+    color: gold;
+    font-size: 25px;
+    font-family: Chalkduster, fantasy;
+}
+
+li a:hover{
+    color: goldenrod;
+}
+
+
+
