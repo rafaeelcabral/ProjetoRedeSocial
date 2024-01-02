@@ -1,5 +1,5 @@
 <?php
-  // Incluir o arquivo de conexão teeste
+  // Incluir o arquivo de conexão
   include 'conexao_mysql.php';
 
   // Mensagens de feedback
