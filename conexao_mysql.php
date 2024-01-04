@@ -9,6 +9,6 @@
   $conexao = new mysqli($servername, $username, $password, $dbname);
 
   // Verifica se houve erro na conexão
-  if ($conexao === false) {
+  if($conexao === false){
     die("Erro de conexão com o banco de dados: " . mysqli_connect_error());
   }

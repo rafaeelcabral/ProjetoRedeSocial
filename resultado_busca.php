@@ -79,12 +79,12 @@
                 $result = $conexao->query($sql);
 
                 // Exibe os resultados
-                if ($result->num_rows > 0) {
-                    while ($row = $result->fetch_assoc()) {
-                        echo "<p>Nome: " . $row['username'] . "<br>";
-                        echo "Email: " . $row['email'] . "</p>";
+                if($result->num_rows > 0){
+                    while($row = $result->fetch_assoc()){
+                      echo "<p>Nome: " . $row['username'] . "<br>";
+                      echo "Email: " . $row['email'] . "</p>";
                     }
-                } else {
+                } else{
                     echo "<p>Nenhum usuário encontrado.</p>";
                 }           
             ?>

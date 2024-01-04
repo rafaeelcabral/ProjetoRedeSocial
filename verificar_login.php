@@ -3,7 +3,7 @@
     include 'conexao_mysql.php';
 
     // Verifica se o formulário de login foi enviado
-    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if($_SERVER['REQUEST_METHOD'] === 'POST'){
         // Obtém os valores digitados pelo usuário
         $user = $_POST['username'];
         $senha = $_POST['password'];
@@ -13,7 +13,7 @@
         $resultado = mysqli_query($conexao, $sql);
 
         // Verifica se a consulta retornou algum resultado
-        if (mysqli_num_rows($resultado) === 1) {
+        if(mysqli_num_rows($resultado) === 1){
             // Obtém o nome do usuário
             $row = mysqli_fetch_assoc($resultado);
             $nomeUsuario = $row['username'];
@@ -21,7 +21,7 @@
             // Redireciona para a página inicial
             header("Location: paginainicial.html?nome=$nomeUsuario");
             exit();
-        } else {
+        } else{
             // Login inválido, exibe uma mensagem de erro
             echo "Usuário ou senha inválidos";
         }

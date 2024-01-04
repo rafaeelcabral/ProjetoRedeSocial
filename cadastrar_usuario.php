@@ -7,7 +7,7 @@
   $mensagem_link = '';
 
   // Verifica se o formulário foi enviado
-  if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Recebe os dados do formulário
     $email = $_POST['email'];
     $usuario = $_POST['username'];
@@ -16,10 +16,10 @@
     // Insere os dados na tabela "Usuario"
     $sql = "INSERT INTO Usuario (email, username, senha) VALUES ('$email', '$usuario', '$senha')";
 
-    if ($conexao->query($sql) === TRUE) {
+    if($conexao->query($sql) === TRUE){
       $mensagem = "Usuário cadastrado com sucesso!";
       $mensagem_link = "Clique <a href='login.html'>aqui</a> para retornar à página de login.";
-    } else {
+    } else{
       $mensagem = "Erro ao cadastrar usuário: " . $conn->error;
     }
 
