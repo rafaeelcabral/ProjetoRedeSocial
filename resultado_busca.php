@@ -68,25 +68,25 @@
         <div id="resultado_busca">
 
             <?php
-                // Incluir o arquivo de conexão
-                include 'conexao_mysql.php';
+              // Incluir o arquivo de conexão
+              include 'conexao_mysql.php';
 
-                // Processa o termo de pesquisa
-                $username = urldecode($_GET['busca']);
+              // Processa o termo de pesquisa
+              $username = urldecode($_GET['busca']);
 
-                // Consulta no banco de dados
-                $sql = "SELECT username, email FROM Usuario WHERE username LIKE '%$username%'";
-                $result = $conexao->query($sql);
+              // Consulta no banco de dados
+              $sql = "SELECT username, email FROM Usuario WHERE username LIKE '%$username%'";
+              $result = $conexao->query($sql);
 
-                // Exibe os resultados
-                if($result->num_rows > 0){
-                    while($row = $result->fetch_assoc()){
-                      echo "<p>Nome: " . $row['username'] . "<br>";
-                      echo "Email: " . $row['email'] . "</p>";
-                    }
-                } else{
-                    echo "<p>Nenhum usuário encontrado.</p>";
-                }           
+              // Exibe os resultados
+              if($result->num_rows > 0){
+                while($row = $result->fetch_assoc()){
+                  echo "<p>Nome: " . $row['username'] . "<br>";
+                  echo "Email: " . $row['email'] . "</p>";
+                }
+              } else{
+                echo "<p>Nenhum usuário encontrado.</p>";
+              }           
             ?>
             
         </div>
