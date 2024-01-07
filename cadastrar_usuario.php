@@ -20,7 +20,7 @@
       $mensagem = "Usuário cadastrado com sucesso!";
       $mensagem_link = "Clique <a href='login.html'>aqui</a> para retornar à página de login.";
     } else{
-      $mensagem = "Erro ao cadastrar usuário: " . $conn->error;
+      $mensagem = "Erro ao cadastrar usuário: " . $conexao->error;
     }
 
     // Fecha a conexão com o banco de dados

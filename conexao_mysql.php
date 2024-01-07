@@ -12,3 +12,4 @@
   if($conexao === false){
     die("Erro de conexão com o banco de dados: " . mysqli_connect_error());
   }
+?>  
