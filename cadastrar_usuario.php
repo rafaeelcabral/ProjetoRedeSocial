@@ -32,13 +32,19 @@
 <html>
 
   <head>
+
     <title>Cadastro de Usuário</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="estilo.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
 
     <style>
+
       h2{
         padding-left: 20px;
         font-weight: bold;
@@ -52,6 +58,27 @@
         background: rgba(162, 170, 172, .4);
         border-radius: 20px;
       }
+
+      /* @media para telas "medium" */
+      @media (max-width: 992px) {
+        #mensagem {
+          width: 50%;
+        }
+      }
+
+      /* @media para telas "small" */
+      @media (max-width: 768px) {
+        #mensagem {
+          width: 70%;
+        }
+        h2{
+          padding-left: 0px;
+        }
+        p{
+          padding-left: 0px;
+        }
+      }    
+
     </style>
 
   </head>
@@ -59,11 +86,15 @@
   <body>
 
     <div id="mensagem">
+
       <h2>Cadastro de Usuário</h2>
-        <p><?php echo $mensagem; ?></p><br>
-        <hr>
-        <p><?php echo $mensagem_link; ?></p>
-        <hr>
+
+      <p><?php echo $mensagem; ?></p><br>
+      <hr>
+
+      <p><?php echo $mensagem_link; ?></p>
+      <hr>
+
     </div>  
 
   </body>
