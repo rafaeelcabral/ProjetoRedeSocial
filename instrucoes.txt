@@ -1,5 +1,5 @@
  - php -S localhost:8000 => executar esse comando no terminal para conectar o sevidor local;
 
- - conectar o mysqll pelo xaamp;
+ - conectar o mysql pelo xaamp;
 
  - não consigo acessar o phpMyAdmin, usar o WorkBench;
