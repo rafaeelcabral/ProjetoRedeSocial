@@ -17,81 +17,97 @@
 
   <body>
 
-    <header class="navbar navbar-expand-lg navbar-dark header with-bg-image">
+    <div id="container">
+      <header>
+        <nav class="navbar navbar-expand-lg">
 
-      <a class="navbar-brand" href="paginainicial.html">
-        <img src="img/rede-social.png" id="logo" >
-      </a>
+          <a class="navbar-brand" href="#">
+            <img src="img/rede-social.png" id="logo">
+          </a>
 
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarNav">
-
-        <!-- formulário -->
-        <form class="form-inline ml-3" action="processar_busca.php" method="post">
-          <input type="text" id="username" name="username" class="form-control mr-1" placeholder="Pesquisar Usuário">
-          <button>
-            <img src="img/lupa.png">
+          <button class="navbar-toggler" data-toggle="collapse" data-target="#menu">
+            <img src="img/navbartoogler.png" style="width: 50px; height: 50px;">
           </button>
-        </form>
-        <!-- fim do formulário -->
 
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active pr-3">
-              <a class="nav-link" href="paginainicial.html">Home</a>
-            </li>
+          <div class="collapse navbar-collapse" id="menu">
+
             <div class="dropdown-divider"></div>
 
-            <li class="nav-item pr-3">
-              <a class="nav-link" href="">Chat</a>
-            </li>
+            <!-- formulário -->
+            <form class="form-inline" action="processar_busca.php" method="post">
+              <input type="text" id="username" name="username" class="form-control mr-1" placeholder="Pesquisar Usuário">
+              <button>
+                <img src="img/lupa.png">
+              </button>
+            </form>
+            <!-- fim do formulário -->
+
             <div class="dropdown-divider"></div>
-            
-            <li class="nav-item pr-3">
-              <a class="nav-link" href="">Notificações</a> 
-            </li>
-            <div class="dropdown-divider"></div>
-            
-            <li class="nav-item pr-3">
-              <a class="nav-link" href="login.html"><img src="img/logout.png" id="logout"></a>
-            </li>
-          </ul>
 
-      </div>
+            <ul class="navbar-nav">
+              <li class="nav-item active pr-3">
+                <a class="nav-link" href="paginainicial.html">Home</a>
+              </li>
 
-    </header>  
+              <div class="dropdown-divider"></div>
 
-    <div class="container mt-4">
+              <li class="nav-item pr-3">
+                <a class="nav-link" href="">Chat</a>
+              </li>
+
+              <div class="dropdown-divider"></div>
+
+              <li class="nav-item pr-3">
+                <a class="nav-link" href="">Notificações</a> 
+              </li>
+
+              <div class="dropdown-divider"></div>
+                
+              <li class="nav-item pr-3">
+                <a class="nav-link" href="login.html"><img src="img/logout.png" id="logout"></a>
+              </li>
+            </ul>
+
+          </div>
+
+        </nav>  
+      </header>
+
+      <section>
         <h2>Resultados da Busca</h2>
         <div id="resultado_busca">
 
-            <?php
-              // Incluir o arquivo de conexão
-              include 'conexao_mysql.php';
+          <?php
+          // Incluir o arquivo de conexão
+          include 'conexao_mysql.php';
 
-              // Processa o termo de pesquisa
-              $username = urldecode($_GET['busca']);
+          // Processa o termo de pesquisa
+          $busca = urldecode($_GET['busca']);
 
-              // Consulta no banco de dados
-              $sql = "SELECT username, email FROM Usuario WHERE username LIKE '%$username%'";
-              $result = $conexao->query($sql);
+          // Consulta no banco de dados
+          $sql = "SELECT username, email FROM Usuario WHERE username LIKE '%$busca%'";
+          $result = $conexao->query($sql);
 
-              // Exibe os resultados
-              if($result->num_rows > 0){
-                while($row = $result->fetch_assoc()){
-                  echo "<p>Nome: " . $row['username'] . "<br>";
-                  echo "Email: " . $row['email'] . "</p>";
-                }
-              } else{
-                echo "<p>Nenhum usuário encontrado.</p>";
-              }           
-            ?>
-            
-        </div>
+          // Exibe os resultados
+          if($result->num_rows > 0){
+            while($row = $result->fetch_assoc()){
+              echo"<hr>";
+              echo "<p>Nome: " . $row['username'] . "</p><br>";
+              echo "<p>Email: " . $row['email'] . "</p><br>";
+              echo "<hr>";
+            }
+          } else{
+            echo "<p>Nenhum usuário encontrado.</p>";
+          }           
+          ?>
+              
+          </div>
+      </section>
+
+      <footer>
+        FOOTER
+      </footer>
     </div>
-
     <!-- Optional JavaScript -->
     <!-- jQuery first-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

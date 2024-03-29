@@ -1,22 +1,14 @@
-#logo{
-    width: 60px;
-    height: 60px;
-}
-
-#logout{
-    width: 40px;
-    height: 40px;
-}
-
-#username{
-    width: 275px;
-}
-
 body{
     background: rgba(162, 170, 172, .4);
 } 
 
+/*---------HEADER----------*/
 header{
+    border: 1px solid red;
+    height: 100px;
+}
+
+nav{
     background: url(img/fundo.jpg);
 }
 
@@ -36,5 +28,76 @@ li a:hover{
     color: goldenrod;
 }
 
+#logo{
+    width: 60px;
+    height: 60px;
+}
 
+#logout{
+    width: 40px;
+    height: 40px;
+}
+
+#username{
+    width: 250px;
+}
+/*-------------------------*/
+
+/*---------SECTION---------*/
+section{
+    border: 1px solid red;
+    height: 1000px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+/*-------------------------*/
+
+/*----------FOOTER---------*/
+footer{
+    border: 1px solid red;
+    height: 50px;
+}
+/*-------------------------*/
+
+/*--------BOOTSTRAP--------*/
+  /*ExtraSmall devices */
+  @media(max-width: 575px){
+    #container{
+        border: 1px solid purple;
+        width: 100%;
+        margin: 0px auto;
+    }
+  }
+      
+  /* Small divices [576px ou +] */
+  @media(min-width: 576px){
+    #container{
+        border: 1px solid purple;
+        width: 100%;
+        margin: 0px auto;
+    }
+  }  
+
+  /* Medium devices [768px ou +] */
+  @media(min-width: 768px){
+    #container{
+        border: 1px solid purple;
+        width: 90%;
+        margin: 0px auto;
+    }
+  }    
+      
+  /* Large devices [992px ou +] */
+  @media(min-width: 992px){
+    #container{
+        border: 1px solid purple;
+        width: 80%;
+        margin: 0px auto;
+    }
+
+    ul{
+      margin-left: 400px;
+    }
+  }
+/*-----------------------------*/
 
