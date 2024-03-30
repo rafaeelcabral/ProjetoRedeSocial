@@ -74,8 +74,9 @@
       </header>
 
       <section>
-        <h2>Resultados da Busca</h2>
         <div id="resultado_busca">
+
+          <h2>Resultados da Busca</h2>
 
           <?php
           // Incluir o arquivo de conexão
@@ -92,20 +93,19 @@
           if($result->num_rows > 0){
             while($row = $result->fetch_assoc()){
               echo"<hr>";
-              echo "<p>Nome: " . $row['username'] . "</p><br>";
+              echo "<br><p>Nome: " . $row['username'] . "</p>";
               echo "<p>Email: " . $row['email'] . "</p><br>";
-              echo "<hr>";
             }
           } else{
-            echo "<p>Nenhum usuário encontrado.</p>";
+            echo "<p>Nenhum usuário encontrado.</p>"; 
           }           
           ?>
               
-          </div>
+        </div>
       </section>
 
       <footer>
-        FOOTER
+        <p>Todos os direitos reservados ©️</p>
       </footer>
     </div>
     <!-- Optional JavaScript -->
