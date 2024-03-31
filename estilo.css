@@ -108,7 +108,7 @@
   }
 
   #form_login{
-    width: 40%;
+    width: 30%;
   }
 
   /* @media para telas "medium" */
@@ -146,7 +146,12 @@
     }  
 
     #form_login{
-      width: 80%;
+      width: 50%;
+      margin: 30px auto auto auto;
+    }
+
+    #label_data_nascimento{
+      padding-left: 10%;
     }
   }
 
@@ -186,5 +191,10 @@
 
     #form_login{
       width: 80%;
+      margin: 30px auto auto auto;
+    }
+
+    #label_data_nascimento{
+      padding-left: 10%;
     }
   }     
