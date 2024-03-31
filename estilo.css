@@ -87,8 +87,10 @@
   }
 
   footer{
+    margin-top: 35px;
     padding-top: 15px;
     background: rgba(162, 170, 172, .4);
+    height: 50px;
   }
 
   #label_data_nascimento{
@@ -105,10 +107,14 @@
     margin: 0px;
   }
 
+  #form_login{
+    width: 40%;
+  }
+
   /* @media para telas "medium" */
   @media (max-width: 992px) {
     form {
-      width: 50%;
+      width: 85%;
       margin: 5px auto auto auto;
     }
 
@@ -138,12 +144,16 @@
       margin: 0px auto 0px auto;
       padding-left: 10px;
     }  
+
+    #form_login{
+      width: 80%;
+    }
   }
 
   /* @media para telas "small" */
   @media (max-width: 768px) {
     form {
-      width: 70%;
+      width: 85%;
       margin: 5px auto auto auto;
     }
 
@@ -173,4 +183,8 @@
       margin: 0px auto 0px auto;
       padding-left: 10px;
     }  
+
+    #form_login{
+      width: 80%;
+    }
   }     
