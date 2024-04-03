@@ -113,9 +113,13 @@
 
   /* @media para telas "medium" */
   @media (max-width: 992px) {
+    body{
+      background-image: url('img/img2.jpg');
+    }
+
     form {
       width: 85%;
-      margin: 25px auto auto auto;
+      margin: 100px auto auto auto;
     }
 
     label{
@@ -147,16 +151,27 @@
 
     #form_login{
       width: 50%;
-      margin: 30px auto auto auto;
+      margin: 150px auto auto auto;
     }
 
     #label_data_nascimento{
       padding-left: 10%;
     }
+
+    footer{
+      width: 100%;
+      position: fixed;
+      bottom: 0;
+    }
+
   }
 
   /* @media para telas "small" */
   @media (max-width: 768px) {
+    body{
+      background-image: url('img/img.jpg');
+    }
+    
     form {
       width: 85%;
       margin: 25px auto auto auto;
@@ -196,5 +211,10 @@
 
     #label_data_nascimento{
       padding-left: 10%;
+    }
+
+    footer{
+      width: 100%;
+      position: relative;
     }
   }     
