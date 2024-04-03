@@ -100,7 +100,6 @@ footer p{
   /*ExtraSmall devices */
   @media(max-width: 575px){
     #container{
-        border: 1px solid purple;
         width: 100%;
         margin: 0px auto;
     }
@@ -117,9 +116,13 @@ footer p{
 
   /* Medium devices [768px ou +] */
   @media(min-width: 768px){
+    body{
+        background-image: url(img/img2.jpg);
+    }
+
     #container{
         /*border: 1px solid purple;*/
-        width: 90%;
+        width: 100%;
         margin: 0px auto;
     }
   }    
@@ -127,7 +130,6 @@ footer p{
   /* Large devices [992px ou +] */
   @media(min-width: 992px){
     #container{
-        /*border: 1px solid purple;*/
         width: 80%;
         margin: 0px auto;
     }
