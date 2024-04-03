@@ -1,8 +1,3 @@
-body{
-    background-image: url(img/img.jpg);
-    background-repeat: repeat;
-} 
-
 /*---------HEADER----------*/
 header{
     border: 1px solid goldenrod;
@@ -55,7 +50,6 @@ li a:hover{
 /*---------SECTION---------*/
 section{
     border: 1px solid goldenrod;
-    height: 900px;
     background: rgba(162, 170, 172, .4);
     margin-top: 10px;
     margin-bottom: 10px;
@@ -99,18 +93,34 @@ footer p{
 /*--------BOOTSTRAP--------*/
   /*ExtraSmall devices */
   @media(max-width: 575px){
+    body{
+        background-image: url(img/img.jpg);
+    }
+
     #container{
         width: 100%;
         margin: 0px auto;
+    }
+
+    section{
+        height: 900px;
     }
   }
       
   /* Small divices [576px ou +] */
   @media(min-width: 576px){
+    body{
+        background-image: url(img/img.jpg);
+    }
+
     #container{
         /*border: 1px solid purple;*/
         width: 100%;
         margin: 0px auto;
+    }
+
+    section{
+        height: 900px;
     }
   }  
 
@@ -121,17 +131,28 @@ footer p{
     }
 
     #container{
-        /*border: 1px solid purple;*/
         width: 100%;
         margin: 0px auto;
+    }
+
+    section{
+        height: 1250px;
     }
   }    
       
   /* Large devices [992px ou +] */
   @media(min-width: 992px){
+    body{
+        background-image: url(img/img.jpg);
+    }
+
     #container{
         width: 80%;
         margin: 0px auto;
+    }
+
+    section{
+        height: 900px;
     }
 
     ul{
