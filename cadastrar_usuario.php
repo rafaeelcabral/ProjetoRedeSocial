@@ -1,4 +1,5 @@
 <?php
+
   // Incluir o arquivo de conexão
   include 'conexao_mysql.php';
 

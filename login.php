@@ -27,6 +27,22 @@
         <label for="password" style="margin-top: 20px;">Senha:</label>
         <input type="password" id="password" name="password" placeholder="password" required> <br><br>
 
+        <?php if(isset($_GET['login']) == true && $_GET['login'] == "error") { ?>
+
+            <div>
+              <p class="text-danger" style="text-align: center;">Usuário ou Senha inválidos</p>
+            </div>
+
+        <?php } ?>   
+        
+        <?php if(isset($_GET['login']) == true && $_GET['login'] == "error2") { ?>
+
+            <div>
+              <p class="text-danger" style="text-align: center;">Faça Login para acessar a página</p>
+            </div>
+
+        <?php } ?>   
+
         <input type="submit" value="Login" id="botaoEnviar">
 
       </fieldset>  

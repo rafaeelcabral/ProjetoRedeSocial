@@ -1,3 +1,14 @@
+<?php
+
+  session_start();
+
+  if(isset($_SESSION['autenticado']) == false || $_SESSION['autenticado'] == false) {
+    header("Location: login.php?login=error2");
+    exit();
+  }
+
+?>
+
 <!doctype html>
 <html lang="pt-br">
 
@@ -46,11 +57,13 @@
 
             <ul class="navbar-nav">
               <li class="nav-item active pr-3">
-                <a class="nav-link" href="paginainicial.html">Meu perfil</a>
+                <a class="nav-link" href="paginainicial.php">Meu perfil</a>
               </li>
 
+              <div class="dropdown-divider"></div>
+
               <li class="nav-item active pr-3">
-                <a class="nav-link" href="paginainicial.html">Home</a>
+                <a class="nav-link" href="paginainicial.php">Home</a>
               </li>
 
               <div class="dropdown-divider"></div>
@@ -78,34 +91,44 @@
       </header>
 
       <section>
+
         <div id="resultado_busca">
 
           <h2>Resultados da Busca</h2>
 
-          <?php
-          // Incluir o arquivo de conexão
-          include 'conexao_mysql.php';
+          <?php if(isset($_GET['resultado']) == true && $_GET['resultado'] == "empty") { ?>
 
-          // Processa o termo de pesquisa
-          $busca = urldecode($_GET['busca']);
+            <p>Nenhum resultado foi encontrado.</p>
 
-          // Consulta no banco de dados
-          $sql = "SELECT username, email FROM Usuario WHERE username LIKE '%$busca%'";
-          $result = $conexao->query($sql);
+          <?php } else { ?>
 
-          // Exibe os resultados
-          if($result->num_rows > 0){
-            while($row = $result->fetch_assoc()){
-              echo"<hr>";
-              echo "<br><p>Nome: " . $row['username'] . "</p>";
-              echo "<p>Email: " . $row['email'] . "</p><br>";
-            }
-          } else{
-            echo "<p>Nenhum usuário encontrado.</p>"; 
-          }           
-          ?>
+            <?php
+              // Incluir o arquivo de conexão
+              include 'conexao_mysql.php';
+
+              // Processa o termo de pesquisa
+              $busca = urldecode($_GET['busca']);
+
+              // Consulta no banco de dados
+              $sql = "SELECT username, email FROM Usuario WHERE username LIKE '%$busca%'";
+              $result = $conexao->query($sql);
+
+              // Exibe os resultados
+              if($result->num_rows > 0){
+                while($row = $result->fetch_assoc()){
+                  echo"<hr>";
+                  echo "<br><p>Nome: " . $row['username'] . "</p>";
+                  echo "<p>Email: " . $row['email'] . "</p><br>";
+                }
+              } else{
+                echo "<p>Nenhum usuário encontrado.</p>"; 
+              }           
+            ?>
+
+          <?php } ?>  
               
         </div>
+
       </section>
 
       <footer>

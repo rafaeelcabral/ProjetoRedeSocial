@@ -1,3 +1,14 @@
+<?php
+
+  session_start();
+
+  if(isset($_SESSION['autenticado']) == false || $_SESSION['autenticado'] == false) {
+    header("Location: login.php?login=error2");
+    exit();
+  }
+
+?>
+
 <!doctype html>
 <html lang="pt-br">
 
@@ -46,13 +57,13 @@
 
             <ul class="navbar-nav">
               <li class="nav-item active pr-3">
-                <a class="nav-link" href="paginainicial.html">Meu perfil</a>
+                <a class="nav-link" href="paginainicial.php">Meu perfil</a>
               </li>
 
               <div class="dropdown-divider"></div>  
 
               <li class="nav-item active pr-3">
-                <a class="nav-link" href="#">Home</a>
+                <a class="nav-link" href="paginainicial.php">Home</a>
               </li>
 
               <div class="dropdown-divider"></div>
@@ -70,7 +81,13 @@
               <div class="dropdown-divider"></div>
                 
               <li class="nav-item pr-3">
-                <a class="nav-link" href="login.html"><img src="img/logout.png" id="logout"></a>
+                <?php
+                  function Logout() {
+                    $_SESSION['autenticado'] = false;
+                    header("Location: login.php");
+                  } 
+                ?>
+                <a class="nav-link" href="login.php"><img src="img/logout.png" id="logout"></a>
               </li>
             </ul>
 
@@ -80,7 +97,7 @@
       </header>
 
       <section>
-        SECTION
+        Olá <?= $_SESSION['user'] ?>
       </section>
 
       <footer>
