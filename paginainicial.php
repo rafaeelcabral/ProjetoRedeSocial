@@ -19,7 +19,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="estilo-paginainicial.css">
+    <link rel="stylesheet" href="css/estilo-paginainicial.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
 
     <title>Página Inicial</title>
@@ -32,7 +32,7 @@
       <header>
         <nav class="navbar navbar-expand-lg">
 
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="paginainicial.php">
             <img src="img/rede-social.png" id="logo">
           </a>
 
@@ -45,7 +45,7 @@
             <div class="dropdown-divider"></div>
 
             <!-- formulário -->
-            <form class="form-inline" action="processar_busca.php" method="post">
+            <form class="form-inline" action="scripts/processar_busca.php" method="post">
               <input type="text" id="username" name="username" class="form-control mr-1" placeholder="Pesquisar Usuário">
               <button>
                 <img src="img/lupa.png">
@@ -57,7 +57,7 @@
 
             <ul class="navbar-nav">
               <li class="nav-item active pr-3">
-                <a class="nav-link" href="paginainicial.php">Meu perfil</a>
+                <a class="nav-link" href="">Meu perfil</a>
               </li>
 
               <div class="dropdown-divider"></div>  
@@ -81,13 +81,7 @@
               <div class="dropdown-divider"></div>
                 
               <li class="nav-item pr-3">
-                <?php
-                  function Logout() {
-                    $_SESSION['autenticado'] = false;
-                    header("Location: login.php");
-                  } 
-                ?>
-                <a class="nav-link" href="login.php"><img src="img/logout.png" id="logout"></a>
+                <a class="nav-link" href="scripts/logout.php"><img src="img/logout.png" id="logout"></a>
               </li>
             </ul>
 

@@ -25,12 +25,12 @@
             $nomeUsuario = $row['username'];
 
             // Redireciona para a página inicial
-            header("Location: paginainicial.php");
+            header("Location: ../paginainicial.php");
             exit();
         } else{
             // Login inválido, exibe uma mensagem de erro
             $_SESSION['autenticado'] = false;
-            header("Location: login.php?login=error");
+            header("Location: ../login.php?login=error");
             exit();
         }
 

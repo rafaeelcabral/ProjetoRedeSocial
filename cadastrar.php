@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="css/estilo.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
 
     <title>Se Cadastre</title>
@@ -15,7 +15,7 @@
 
   <body>
 
-    <form action="cadastrar_usuario.php" method="POST">
+    <form action="scripts/cadastrar_usuario.php" method="POST">
 
       <fieldset>
 

@@ -13,9 +13,9 @@
     // Exibe os resultados
     if($result->num_rows > 0){
         // Redireciona para a página de resultados com o termo de pesquisa
-        header("Location: resultado_busca.php?busca=" . urlencode($username));
+        header("Location: ../resultado_busca.php?busca=" . urlencode($username));
     } else{
-        header("Location: resultado_busca.php?resultado=empty");
+        header("Location: ../resultado_busca.php?resultado=empty");
     }
 
     $conexao->close();

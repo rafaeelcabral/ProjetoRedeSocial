@@ -21,7 +21,7 @@
 
     if($conexao->query($sql) === TRUE){
       $mensagem = "Usuário cadastrado com sucesso!";
-      $mensagem_link = "Clique <a href='login.html'>aqui</a> para retornar à página de login.";
+      $mensagem_link = "Clique <a href='../login.php'>aqui</a> para retornar à página de login.";
     } else{
       $mensagem = "Erro ao cadastrar usuário: " . $conexao->error;
     }
@@ -43,7 +43,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="../css/estilo.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
 
     <style>

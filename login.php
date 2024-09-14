@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="css/estilo.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
 
     <title>Login</title>
@@ -15,7 +15,7 @@
 
   <body>
 
-    <form action="verificar_login.php" method="POST" id="form_login">
+    <form action="scripts/verificar_login.php" method="POST" id="form_login">
 
       <fieldset>
 
@@ -51,7 +51,7 @@
 
     <footer class="fixed-bottom">
 
-      <p>Ainda não tem uma conta? <a href="cadastrar.html">Cadastrar</a></p>
+      <p>Ainda não tem uma conta? <a href="cadastrar.php">Cadastrar</a></p>
 
     </footer>  
 
