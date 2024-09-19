@@ -57,7 +57,7 @@
 
             <ul class="navbar-nav">
               <li class="nav-item active pr-3">
-                <a class="nav-link" href="">Meu perfil</a>
+                <a class="nav-link" href="perfil.php">Meu perfil</a>
               </li>
 
               <div class="dropdown-divider"></div>  
@@ -91,7 +91,7 @@
       </header>
 
       <section>
-        Olá <?= $_SESSION['user'] ?>
+        
       </section>
 
       <footer>

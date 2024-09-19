@@ -21,7 +21,7 @@
 
     if($conexao->query($sql) === TRUE){
       $mensagem = "Usuário cadastrado com sucesso!";
-      $mensagem_link = "Clique <a href='../login.php'>aqui</a> para retornar à página de login.";
+      $mensagem_link = "Clique <a href='../index.php'>aqui</a> para retornar à página de login.";
     } else{
       $mensagem = "Erro ao cadastrar usuário: " . $conexao->error;
     }

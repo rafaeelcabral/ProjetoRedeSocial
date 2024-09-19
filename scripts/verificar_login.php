@@ -16,21 +16,24 @@
 
         // Verifica se a consulta retornou algum resultado
         if(mysqli_num_rows($resultado) === 1){
-            // Autenticação
-            $_SESSION['autenticado'] = true;
-            $_SESSION['user'] = $user;
 
-            // Obtém o nome do usuário
+            // Autenticação
             $row = mysqli_fetch_assoc($resultado);
-            $nomeUsuario = $row['username'];
+            $_SESSION['autenticado'] = true;
+            $_SESSION['email'] = $row['email'];
+            $_SESSION['user'] = $row['username'];
+            $_SESSION['genero'] = $row['genero'];
+            $_SESSION['data_nascimento'] = $row['data_nascimento'];
+            $_SESSION['img'] = $row['profile_img'];
 
             // Redireciona para a página inicial
-            header("Location: ../paginainicial.php");
+            header("Location: ../perfil.php");
             exit();
+
         } else{
             // Login inválido, exibe uma mensagem de erro
             $_SESSION['autenticado'] = false;
-            header("Location: ../login.php?login=error");
+            header("Location: ../index.php?login=error");
             exit();
         }
 
