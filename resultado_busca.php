@@ -3,7 +3,7 @@
   session_start();
 
   if(isset($_SESSION['autenticado']) == false || $_SESSION['autenticado'] == false) {
-    header("Location: login.php?login=error2");
+    header("Location: index.php?login=error2");
     exit();
   }
 
