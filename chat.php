@@ -183,19 +183,30 @@
                 include "scripts/conexao_mysql.php";
 
                 $meu_id = $_SESSION['user_id'];
+                
+                //Detectando as Mensagens q tenham meu id
                 $sql = "SELECT * FROM mensagens WHERE id_destinatario = '$meu_id'";
                 $resultado = mysqli_query($conexao, $sql);
-                print_r(mysqli_num_rows($resultado));
 
+                //Abrindo Laço de Repetição para exibir as divs de acordo com o nº de Linhas
                 $cont = 0;
                 while($cont < mysqli_num_rows($resultado)) {
+                    //Pegando de $resultado <=> Tabela "mensagens"
                     $row = mysqli_fetch_assoc($resultado);
-            ?>
+                    $id_remetente = $row["id_remetente"];
+                    $mensagem = $row["mensagem"];
+
+                    //Pegando de $resultado2 <=> Tabela "usuario"
+                    $sql2 = "SELECT * FROM usuario WHERE id = $id_remetente";
+                    $resultado2 = mysqli_query($conexao, $sql2);
+                    $row2 = mysqli_fetch_assoc($resultado2);
+                    $user_remetente = $row2["username"];
+             ?>
                     <div id="mensagens">
                         <br>
-                        <p>Remetente => <?= $row["id_remetente"] ?></p>
+                        <p>Remetente => <?= $user_remetente ?></p>
                         <br>
-                        <p>Mensagem => <?= $row["mensagem"] ?></p>
+                        <p>Mensagem => <?= $mensagem ?></p>
                         <br>
                     </div>
             <?php 
