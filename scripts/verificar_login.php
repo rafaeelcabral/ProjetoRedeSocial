@@ -20,6 +20,7 @@
             // Autenticação
             $row = mysqli_fetch_assoc($resultado);
             $_SESSION['autenticado'] = true;
+            $_SESSION['user_id'] = $row['id'];
             $_SESSION['email'] = $row['email'];
             $_SESSION['user'] = $row['username'];
             $_SESSION['genero'] = $row['genero'];

@@ -84,7 +84,7 @@
                     <div class="dropdown-divider"></div>
 
                     <li class="nav-item pr-3">
-                    <a class="nav-link" href="">Chat</a>
+                    <a class="nav-link" href="chat.php">Chat</a>
                     </li>
 
                     <div class="dropdown-divider"></div>
