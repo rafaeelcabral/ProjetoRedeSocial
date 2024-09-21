@@ -26,8 +26,8 @@
 
         <label for="genero">Gênero:</label>
         <select id="genero" name="genero">
-            <option value="masculino">Masculino</option>
-            <option value="feminino">Feminino</option>
+          <option value="masculino">Masculino</option>
+          <option value="feminino">Feminino</option>
         </select>
 
         <label for="data_nascimento" id="label_data_nascimento">Data de Nascimento:</label>
