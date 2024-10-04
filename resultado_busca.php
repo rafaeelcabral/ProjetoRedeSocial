@@ -110,7 +110,7 @@
               $busca = urldecode($_GET['busca']);
 
               // Consulta no banco de dados
-              $sql = "SELECT username, email FROM Usuario WHERE username LIKE '%$busca%'";
+              $sql = "SELECT username, email FROM users WHERE username LIKE '%$busca%'";
               $result = $conexao->query($sql);
 
               // Exibe os resultados

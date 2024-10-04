@@ -114,7 +114,7 @@
                     <div id="infos">
                         <img src=<?= $_SESSION["img"] ?> style="width: 100px; height: 100px;"> <br><br>
                         
-                        <p> <b><?= $_SESSION["user"] ?></b> </p>
+                        <p> <b><?= $_SESSION["username"] ?></b> </p>
                         <p> <b><?= $_SESSION["email"] ?></b> </p>
                         <p> <b><?= $_SESSION["genero"] ?></b> </p>
                         <p> <b><?= $_SESSION["data_nascimento"] ?></b> </p>

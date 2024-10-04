@@ -11,13 +11,13 @@
   if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Recebe os dados do formulário
     $email = $_POST['email'];
-    $usuario = $_POST['username'];
-    $senha = $_POST['password'];
+    $username = $_POST['username'];
+    $password = $_POST['password'];
     $genero = $_POST['genero'];
     $data_nascimento = $_POST['data_nascimento'];
 
     // Insere os dados na tabela "Usuario"
-    $sql = "INSERT INTO Usuario (email, username, senha, genero, data_nascimento) VALUES ('$email', '$usuario', '$senha', '$genero', '$data_nascimento')";
+    $sql = "INSERT INTO users (email, username, senha, genero, data_nascimento) VALUES ('$email', '$username', '$password', '$genero', '$data_nascimento')";
 
     if($conexao->query($sql) === TRUE){
       $mensagem = "Usuário cadastrado com sucesso!";

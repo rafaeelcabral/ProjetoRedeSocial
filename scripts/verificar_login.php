@@ -7,11 +7,11 @@
     // Verifica se o formulário de login foi enviado
     if($_SERVER['REQUEST_METHOD'] === 'POST'){
         // Obtém os valores digitados pelo usuário
-        $user = $_POST['username'];
-        $senha = $_POST['password'];
+        $username = $_POST['username'];
+        $password = $_POST['password'];
 
         // Consulta SQL para verificar se os dados de login estão corretos
-        $sql = "SELECT * FROM Usuario WHERE username = '$user' AND senha = '$senha'";
+        $sql = "SELECT * FROM users WHERE username = '$username' AND senha = '$password'";
         $resultado = mysqli_query($conexao, $sql);
 
         // Verifica se a consulta retornou algum resultado
@@ -20,9 +20,9 @@
             // Autenticação
             $row = mysqli_fetch_assoc($resultado);
             $_SESSION['autenticado'] = true;
-            $_SESSION['user_id'] = $row['id'];
+            $_SESSION['user_id'] = $row['user_id'];
             $_SESSION['email'] = $row['email'];
-            $_SESSION['user'] = $row['username'];
+            $_SESSION['username'] = $row['username'];
             $_SESSION['genero'] = $row['genero'];
             $_SESSION['data_nascimento'] = $row['data_nascimento'];
             $_SESSION['img'] = $row['profile_img']; 

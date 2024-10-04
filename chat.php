@@ -185,7 +185,7 @@
                     $meu_id = $_SESSION['user_id'];
                     
                     //Detectando as Mensagens q tenham meu id
-                    $sql = "SELECT * FROM mensagens WHERE id_destinatario = '$meu_id'";
+                    $sql = "SELECT * FROM messages WHERE id_destinatario = '$meu_id'";
                     $resultado = mysqli_query($conexao, $sql);
 
                     //Abrindo Laço de Repetição para exibir as divs de acordo com o nº de Linhas
@@ -197,7 +197,7 @@
                         $mensagem = $row["mensagem"];
 
                         //Pegando de $resultado2 <=> Tabela "usuario"
-                        $sql2 = "SELECT * FROM usuario WHERE id = $id_remetente";
+                        $sql2 = "SELECT * FROM users WHERE user_id = $id_remetente";
                         $resultado2 = mysqli_query($conexao, $sql2);
                         $row2 = mysqli_fetch_assoc($resultado2);
                         $user_remetente = $row2["username"];
