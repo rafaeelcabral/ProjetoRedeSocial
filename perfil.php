@@ -112,7 +112,7 @@
                     <h2>Meu Perfil</h2>
 
                     <div id="infos">
-                        <img src=<?= $_SESSION["img"] ?> style="width: 100px; height: 100px;"> <br><br>
+                        <img src=<?= $_SESSION["profile_img"] ?> style="width: 100px; height: 100px;"> <br><br>
                         
                         <p> <b><?= $_SESSION["username"] ?></b> </p>
                         <p> <b><?= $_SESSION["email"] ?></b> </p>

@@ -25,7 +25,7 @@
             $_SESSION['username'] = $row['username'];
             $_SESSION['genero'] = $row['genero'];
             $_SESSION['data_nascimento'] = $row['data_nascimento'];
-            $_SESSION['img'] = $row['profile_img']; 
+            $_SESSION['profile_img'] = $row['profile_img']; 
 
             // Redireciona para a página inicial
             header("Location: ../perfil.php");
