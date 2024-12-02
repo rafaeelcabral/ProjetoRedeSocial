@@ -71,25 +71,19 @@
                     <div class="dropdown-divider"></div>
 
                     <ul class="navbar-nav">
-                        <li class="nav-item active pr-3">
+                        <li class="nav-item active pr-2">
                         <a class="nav-link" href="perfil.php">Meu perfil</a>
                         </li>
 
                         <div class="dropdown-divider"></div>
 
-                        <li class="nav-item active pr-3">
-                        <a class="nav-link" href="paginainicial.php">Home</a>
-                        </li>
-
-                        <div class="dropdown-divider"></div>
-
-                        <li class="nav-item pr-3">
+                        <li class="nav-item pr-2">
                         <a class="nav-link" href="chat.php">Chat</a>
                         </li>
 
                         <div class="dropdown-divider"></div>
 
-                        <li class="nav-item pr-3">
+                        <li class="nav-item pr-2">
                         <a class="nav-link" href="">Notificações</a> 
                         </li>
 
